@@ -1,0 +1,16 @@
+.grid {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  /* .centered-container {
+    height: 80vh;
+    width: 98vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; */

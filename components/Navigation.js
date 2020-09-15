@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import { FaTimes } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { config } from "../config/config.yml";
 
 export const NavigationItem = props => (
@@ -32,7 +32,7 @@ const CloseButton = props => (
         className="icon-button"
         onClick={props.close}
         type="button">
-        <FaTimes size={20} />
+        <FaArrowLeft size={20} />
         <style jsx>{`
             .icon-button {
                 height: 30px;
@@ -44,7 +44,7 @@ const CloseButton = props => (
 );
 
 export default class Navigation extends Component {
-    state = { navOpen: false };
+    state = { navOpen: true };
 
     handleToggleNav = () => {
         this.props.toggleNavigation();
@@ -80,7 +80,7 @@ export default class Navigation extends Component {
                     }
                     .navigation ul {
                         height: 100vh;
-                        width: 380px;
+                        width: 210px;
                         background-color: #fff;
                         box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
                         border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -105,7 +105,7 @@ export default class Navigation extends Component {
                         height: 100vh;
                         top: 0;
                         left: 0;
-                        background-color: rgba(0, 0, 0, 0.2);
+                        background-color: rgba(0, 0, 0, 0);
                         transition: background-color 0.2s;
                     }
                     .navigation.closed .backdrop {

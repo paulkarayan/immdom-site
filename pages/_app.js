@@ -14,7 +14,7 @@ import { globalStyles } from "../styles";
 export default class MyApp extends App {
     constructor(props) {
         super(props);
-        this.state = { navOpen: false, postData: props.postData };
+        this.state = { navOpen: true, postData: props.postData };
     }
 
     static async getInitialProps({ Component, router, ctx }) {

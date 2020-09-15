@@ -1,8 +1,10 @@
 import React from "react";
 import PostListing from "../components/PostListing";
+import { centeredPageStyles } from "../styles";
+
 
 export const meta = {
-    title: "Programming Posts",
+    title: "Functions Catalogue",
     tags: ["Next.js", "MDX"],
     layout: "blog-post-list",
     publishDate: "2011-01-01",
@@ -14,11 +16,15 @@ export const meta = {
 export default function Blog(props) {
     const blogPosts = props.allData.filter(content => content.type == "post");
     return (
-        <div className="blog-post-list">
+        <div className="centered-container">
             <h1>{meta.title}</h1>
+
+
             {blogPosts.map((post, index) => (
                 <PostListing key={index} post={post} indes={index} />
             ))}
+            <style jsx>{centeredPageStyles}</style>
+
         </div>
     );
 }
